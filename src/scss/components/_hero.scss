@@ -1,0 +1,24 @@
+.hero {
+  padding-top: 60px;
+  background: #f7f9ff;
+  margin-bottom: 120px;
+  @media (max-width: 992px) {
+    margin-bottom: 60px;
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(35px, 4vw, 75px);
+  }
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__desc {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: var(--fontSize-16);
+    line-height: 120%;
+    color: var(--dark);
+    margin-bottom: clamp(30px, 3vw, 60px);
+  }
+}

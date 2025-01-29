@@ -1,0 +1,14 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+@import "./components/header";
+@import "./components/hero";
+@import "./components/about";
+@import "./components/services";
+@import "./components/works";
+@import "./components/futures";
+@import "./components/country";
+@import "./components/company";

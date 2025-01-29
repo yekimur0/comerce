@@ -1,0 +1,60 @@
+.header {
+  border-bottom: 1px solid rgba(11, 89, 161, 0.4);
+  padding: 10px 0;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 20px;
+  }
+
+  .nav {
+    &__list {
+      display: flex;
+      gap: 24px;
+    }
+    &__link {
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: var(--fontSize-16);
+      line-height: 120%;
+      text-transform: uppercase;
+      text-align: center;
+      color: var(--dark);
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 0%;
+        height: 1px;
+        background: var(--dark);
+        transition: width var(--transition);
+      }
+      @include hover {
+        &:hover {
+          &::before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .phone {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: clamp(18px, 2vw, 24px);
+    line-height: 90%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #272727;
+    transition: color var(--transition);
+    @include hover {
+      &:hover {
+        color: var(--orange);
+      }
+    }
+  }
+}
