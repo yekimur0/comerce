@@ -13,6 +13,9 @@
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     margin-bottom: 10px;
+    @media(max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .item {
@@ -22,7 +25,9 @@
     border-radius: 8px;
     padding: 20px;
     background: #f7f9ff;
-
+    @media(max-width: 992px) {
+      grid-template-columns: 1fr;
+    }
     .title {
       font-family: var(--font-family);
       font-weight: 700;
@@ -40,6 +45,11 @@
       font-size: var(--fontSize-16);
       line-height: 120%;
       color: var(--dark);
+    }
+    .image {
+      img {
+        width: 100%;
+      }
     }
   }
 }

@@ -8,6 +8,9 @@
     grid-template-columns: repeat(12, 1fr);
     gap: clamp(20px, 2vw, 40px);
     margin-bottom: 60px;
+    @media(max-width: 1200px) {
+      grid-template-columns: 1fr;
+    }
   }
   &__title {
     grid-column: span 5;
@@ -20,11 +23,15 @@
     font-size: 16px;
     line-height: 120%;
     color: var(--dark);
+    margin: 0;
   }
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: clamp(20px, 2vw, 40px);
+    @media(max-width: 1200px) {
+      grid-template-columns: 1fr;
+    }
   }
   &__image {
     grid-column: span 5;
@@ -35,12 +42,19 @@
       height: 100%;
       border-radius: 8px;
     }
+    @media(max-width: 1200px) {
+      display: flex;
+      justify-content: center;
+      grid-column: auto;
+    }
   }
   &__content {
     grid-column: span 7;
     display: flex;
     flex-direction: column;
-
+    @media(max-width: 1200px) {
+      grid-column: auto;
+    }
     .subtitle {
       font-family: var(--font-family);
       font-weight: 700;

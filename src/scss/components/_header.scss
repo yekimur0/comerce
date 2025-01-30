@@ -58,3 +58,30 @@
     }
   }
 }
+
+
+.burger__wrapper {
+  width: 60px;
+  height: 40px;
+  background: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 0px 10px;
+  cursor: pointer;
+  > * {
+    pointer-events: none;
+  }
+
+  .burger {
+    background: url('../../img/burger-line.svg') center / cover no-repeat;
+    width: 40px;
+    height: 14px;
+
+    &.active {
+      background: url('../../img/burger-close.svg') center / cover no-repeat;
+      height: 26px;
+    }
+  }
+}

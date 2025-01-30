@@ -34,6 +34,9 @@
       background: #f7f9ff;
       &:has(.image) {
         padding: 0;
+        @media(max-width: 992px) {
+          display: none;
+        }
       }
       &:nth-child(1) {
         border: 1px solid #0b59a1;
@@ -67,6 +70,7 @@
         overflow: hidden;
         img {
           border-radius: 8px;
+          width: 100%;
         }
       }
     }

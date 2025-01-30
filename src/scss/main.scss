@@ -12,3 +12,257 @@
 @import "./components/futures";
 @import "./components/country";
 @import "./components/company";
+
+
+.footer {
+  background: var(--dark);
+  padding: 60px 0;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    @media(max-width: 992px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__nav {
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .link {
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: var(--fontSize-16);
+      line-height: 120%;
+      text-transform: uppercase;
+      color: var(--white);
+      transition: var(--transition);
+      @include hover {
+        &:hover {
+          color: var(--orange);
+        }
+      }
+    }
+  }
+
+  .place {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    &__title {
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+    &__address {
+      display: flex;
+      align-items: flex-start;
+      gap: 5px;
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--white);
+    }
+  }
+
+  &__mail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--white);
+    margin-top: 23px;
+    transition: var(--transition);
+    @include hover {
+      &:hover {
+        color: var(--orange);
+        svg > rect {
+          fill: var(--orange)
+        }
+      }
+    }
+  }
+
+  .footer__col--last {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__policy {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--white);
+    transition: color var(--transition);
+
+    @include hover {
+      &:hover {
+        color: var(--orange)
+      }
+    }
+  }
+
+  &__copyright {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--white);
+    margin-top: 20px;
+  }
+}
+
+.callback {
+  margin-bottom: 120px;
+  @media(max-width: 992px) {
+    margin-bottom: 60px;
+  }
+  &__wrapper {
+    background: #0B59A1 url('../img/cb-bg.svg') center / cover no-repeat;
+    border-radius: 8px;
+    padding: clamp(20px, 2.5vw, 40px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    @media(max-width: 992px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  .lside {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+  }
+  &__title {
+    color: var(--white)
+  }
+  .bottom {
+    margin-top: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    @media(max-width: 992px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  .mail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--white);
+    transition: var(--transition);
+    max-width: fit-content;
+    @include hover {
+      &:hover {
+        color: var(--orange);
+        svg > rect {
+          fill: var(--orange)
+        }
+      }
+    }
+  }
+  .place {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    strong {
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+    &__address {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 14px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  }
+}
+
+.callback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    input {
+      border: 1px solid #f7f9ff;
+      border-radius: 4px;
+      padding: 20px 36px;
+      flex: 1 1 325px;
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 16px;
+      color: var(--white);
+      background-color: transparent;
+      outline: none;
+      &:focus {
+        border-width: 3px;;
+      }
+      &::placeholder {
+        color: rgba(247, 249, 255, 0.5);
+      }
+    }
+  }
+
+  &__bottom {
+    margin-top: 40px;
+  }
+  .policy {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 16px 1fr;
+    align-items: center;
+    gap: 5px;
+    input {
+      width: 16px;
+      height: 16px;
+      accent-color: var(--orange);
+    }
+    label {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 12px;
+      color: var(--white);
+    }
+  }
+  &__btn {
+    border: 1px solid transparent;
+    @include hover {
+      &:hover {
+        border-color: #fff
+      }
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .china, .turkey, .vetnam, .belarus, .armenia, .erpa, .spanish, .india {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
