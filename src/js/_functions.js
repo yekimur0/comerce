@@ -87,3 +87,22 @@ Swiper.use([Navigation, Pagination, Scrollbar]);
 import { accordion } from "./functions/accordion";
 import { MY_SELECT } from "./functions/my-select";
 import { listener } from "./functions/listener";
+
+function fixedHeader() {
+  const header = document.querySelector('.header');
+  const innerHeightHeader = header.getBoundingClientRect();
+  const main = document.querySelector('.main')
+  window.addEventListener('scroll', (e) => {
+      let scrollY = window.scrollY;
+      
+      if (scrollY >= 550) {
+          header.classList.add('fixed--header')
+          main.style.marginTop = `${innerHeightHeader.height}` + 'px';
+      } else {
+          header.classList.remove('fixed--header')
+          main.style.marginTop = 0;
+      }
+  })
+}
+
+fixedHeader();
