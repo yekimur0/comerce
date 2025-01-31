@@ -9,23 +9,23 @@ html {
 }
 
 .page {
-  height: 100%;
-  font-family: var(--font-family, sans-serif);
+  height:                   100%;
+  font-family:              var(--font-family, sans-serif);
   -webkit-text-size-adjust: 100%;
 }
 
 .page__body {
-  margin: 0;
-  min-width: 370px;
-  min-height: 100%;
-  font-size: 16px;
-  overflow-x: hidden;
+  margin:           0;
+  min-width:        370px;
+  min-height:       100%;
+  font-size:        16px;
+  overflow-x:       hidden;
   background-color: #fff;
 }
 
 img {
-  height: auto;
-  max-width: 100%;
+  height:     auto;
+  max-width:  100%;
   object-fit: cover;
 }
 
@@ -38,24 +38,24 @@ a {
 }
 
 .btn-reset {
-  border: none;
-  padding: 0;
+  border:           none;
+  padding:          0;
   background-color: transparent;
-  cursor: pointer;
+  cursor:           pointer;
 }
 
 .list-reset {
   list-style: none;
-  margin: 0;
-  padding: 0;
+  margin:     0;
+  padding:    0;
 }
 
 .input-reset {
   -webkit-appearance: none;
-  appearance: none;
-  border: none;
-  border-radius: 0;
-  background-color: #fff;
+  appearance:         none;
+  border:             none;
+  border-radius:      0;
+  background-color:   #fff;
 
   &::-webkit-search-decoration,
   &::-webkit-search-cancel-button,
@@ -68,23 +68,24 @@ a {
 .visually-hidden {
   position: absolute;
   overflow: hidden;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  width: 1px;
-  height: 1px;
-  clip: rect(0 0 0 0);
+  margin:   -1px;
+  border:   0;
+  padding:  0;
+  width:    1px;
+  height:   1px;
+  clip:     rect(0 0 0 0);
 }
 
 .container {
-  margin: 0 auto;
-  padding: 0 var(--container-offset);
+  margin:    0 auto;
+  padding:   0 var(--container-offset);
   max-width: var(--container-width);
 }
+
 .container-fluid {
   max-width: 1640px;
-  margin: 0 auto;
-  padding: 0 10px;
+  margin:    0 auto;
+  padding:   0 10px;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -96,12 +97,12 @@ a {
 }
 
 .dis-scroll {
-  position: fixed;
-  left: 0;
-  top: 0;
-  overflow: hidden;
-  width: 100%;
-  height: 100vh;
+  position:            fixed;
+  left:                0;
+  top:                 0;
+  overflow:            hidden;
+  width:               100%;
+  height:              100vh;
   overscroll-behavior: none;
 }
 
@@ -116,31 +117,31 @@ a {
 }
 
 .title--section {
-  font-family: var(--font-family);
-  font-weight: 700;
-  font-size: clamp(28px, 3.5vw, 60px);
-  line-height: 120%;
+  font-family:    var(--font-family);
+  font-weight:    700;
+  font-size:      clamp(28px, 3.5vw, 60px);
+  line-height:    120%;
   text-transform: uppercase;
-  color: var(--dark);
-  margin: 0;
+  color:          var(--dark);
+  margin:         0;
 }
 
 .btn {
-  border-radius: 8px;
-  padding: 20px 40px;
-  font-family: var(--font-family);
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 120%;
-  text-transform: uppercase;
-  color: var(--white);
+  border-radius:    8px;
+  padding:          20px 40px;
+  font-family:      var(--font-family);
+  font-weight:      700;
+  font-size:        20px;
+  line-height:      120%;
+  text-transform:   uppercase;
+  color:            var(--white);
   background-color: var(--orange);
-  transition: var(--transition);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  width: 100%;
+  transition:       var(--transition);
+  display:          flex;
+  align-items:      center;
+  justify-content:  center;
+  gap:              10px;
+  width:            100%;
   @include hover {
     &:hover {
       background-color: var(--accent);

@@ -62,10 +62,10 @@ Swiper.use([Navigation, Pagination, Scrollbar]);
 // const rellax = new Rellax('.rellax');
 
 // Подключение плавной прокрутки к якорям
-// import SmoothScroll from "smooth-scroll";
-// const scroll = new SmoothScroll('a[href*="#"]', {
-//   header: "[data-scroll-header]",
-// });
+import SmoothScroll from "smooth-scroll";
+const scroll = new SmoothScroll('a[href*="#"]', {
+  header: "[data-scroll-header]",
+});
 
 // Подключение событий свайпа на мобильных
 // import 'swiped-events';
@@ -94,7 +94,7 @@ function fixedHeader() {
   const main = document.querySelector('.main')
   window.addEventListener('scroll', (e) => {
       let scrollY = window.scrollY;
-      
+
       if (scrollY >= 550) {
           header.classList.add('fixed--header')
           main.style.marginTop = `${innerHeightHeader.height}` + 'px';

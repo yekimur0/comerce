@@ -32,7 +32,7 @@
       burger?.setAttribute("aria-label", "Открыть меню");
       burger.classList.remove("active");
       menu.classList.remove("active");
-      document.body.classList.toggle('dis-scroll')
+      document.body.classList.remove('dis-scroll')
     });
   });
 })();

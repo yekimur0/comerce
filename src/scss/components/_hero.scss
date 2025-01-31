@@ -1,38 +1,203 @@
 .hero {
-  padding-top: 60px;
-  background: #f7f9ff;
+  padding-top:   60px;
+  background:    #f7f9ff;
   margin-bottom: 120px;
   @media (max-width: 992px) {
     margin-bottom: 60px;
   }
+
   &__content {
-    display: grid;
+    display:               grid;
     grid-template-columns: 1fr 1fr;
-    gap: clamp(35px, 4vw, 75px);
+    gap:                   clamp(35px, 4vw, 75px);
     @media(max-width: 1200px) {
       grid-template-columns: 1fr;
     }
   }
+
   &__title {
     margin-bottom: 20px;
   }
+
   &__desc {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: var(--fontSize-16);
-    line-height: 120%;
-    color: var(--dark);
+    font-family:   var(--font-family);
+    font-weight:   400;
+    font-size:     var(--fontSize-16);
+    line-height:   120%;
+    color:         var(--dark);
     margin-bottom: clamp(30px, 3vw, 60px);
   }
+
   .map {
-    
+    position: relative;
+
+    .map-dots {
+      position: absolute;
+      top:      70px;
+      left:     140px;
+      @media(max-width: 1200px) {
+        top: 100px;
+        left: 230px;
+        width: 60%;
+      }
+      @media(max-width: 768px) {
+        top: 60px;
+        left: 140px;
+      }
+      @media(max-width: 475px) {
+        top: 30px;
+        left: 70px;
+        width: 60%;
+      }
+      svg {
+        height:    100%;
+        width: 100%;
+        transform: translateY(5px);
+      }
+
+      .map-dot {
+        animation: myAnim 5s ease 0s 1000 normal both;
+      }
+
+    }
+
     @media(max-width: 1200px) {
-      display: flex;
+      display:         flex;
       justify-content: center;
       svg {
-        width: 100%;
+        width:  100%;
         height: 100%;
       }
     }
+  }
+}
+
+.airplane {
+  position: absolute;
+  @media(max-width: 1200px) {
+    animation: none !important;
+  }
+}
+
+.airplane-1 {
+  position:  absolute;
+  top:       250px;
+  left:      220px;
+  animation: moving 5s linear infinite;
+  @media(max-width: 1200px) {
+    top: 450px;
+    left: 400px;
+  }
+  @media(max-width: 768px) {
+    top: 100px;
+    left: 110px;
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+  }
+}
+
+
+
+@keyframes moving {
+  0% {
+
+    transform: scale(1);
+    opacity:   1;
+  }
+  30% {
+    top:       200px;
+    left:      200px;
+    transform: rotate(-5deg);
+  }
+  60% {
+    top:       160px;
+    left:      170px;
+    transform: rotate(3deg);
+  }
+  80% {
+    top:       140px;
+    left:      160px;
+    transform: translateY(-10px) scale(0.8);
+  }
+  100% {
+    top:       130px;
+    left:      150px;
+    transform: translateY(-20px) scale(0.7);
+  }
+}
+
+.airplane-2 {
+  position: absolute;
+  top: 190px;
+  right: 310px;
+  animation: moving_rotate 4s linear infinite;
+  @media(max-width: 1200px) {
+    top: 330px;
+    right: 530px;
+  }
+  @media(max-width: 768px) {
+    top: 80px;
+    left: 180px;
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+
+  }
+}
+
+@keyframes moving_rotate {
+  0% {
+
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  30% {
+    top: 170px;
+    right: 300px;
+    transform: scale(0.95) rotate(10deg);
+  }
+  50% {
+    top: 150px;
+    right: 290px;
+    transform: scale(0.9) rotate(15deg);
+  }
+  70% {
+    top: 130px;
+    right: 285px;
+    transform: scale(0.8) rotate(22deg);
+  }
+  100% {
+    top: 120px;
+    right: 280px;
+    transform: scale(0.7) rotate(30deg);
+  }
+}
+
+@keyframes myAnim {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: translateY(-3px);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: translateY(3px);
+  }
+
+  80% {
+    transform: translateY(5px);
+  }
+
+  90% {
+    transform: translateY(-5px);
   }
 }
